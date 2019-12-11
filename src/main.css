@@ -31,6 +31,10 @@ aside.toc-nav {
   max-height: 70%;
 }
 
+aside.toc-nav.hide {
+  display: none;
+}
+
 aside.toc-nav.nothing {
   width: 0;
 }
