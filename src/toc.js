@@ -40,7 +40,7 @@ const scrollHandler = () => {
   titleBlocks.forEach((titleBlock, index) => {
     const rect = titleBlock.getBoundingClientRect()
     // still in sight
-    if (rect.top <= clientHeight && rect.height + rect.top > 0) {
+    if (rect.top <= clientHeight && rect.height + rect.top > 90) {
       insightBlocks.push(index)
     }
   })
@@ -48,7 +48,7 @@ const scrollHandler = () => {
   // scroll to top, choose the first one
   if (scrollingElement.scrollTop === 0) {
     insightBlocks = [0]
-  } else if (scrollingElement.offsetHeight - window.innerHeight - scrollingElement.scrollTop < 5 &&
+  } else if (scrollingElement.scrollHeight - scrollingElement.clientHeight - scrollingElement.scrollTop < 5 &&
     insightBlocks.length > 0) {
     // scroll to bottom and still multi titile in sight, choose the last one
     insightBlocks = [insightBlocks[insightBlocks.length - 1]]
