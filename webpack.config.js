@@ -4,6 +4,9 @@ const pluginName = 'docsify-plugin-toc'
 
 module.exports = {
   mode: 'production',
+  optimization: {
+    minimize: false
+  },
   entry: './src/index.js',
   output: {
     filename: `${pluginName}.min.js`,
